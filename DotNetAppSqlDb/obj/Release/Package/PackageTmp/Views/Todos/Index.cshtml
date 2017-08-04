@@ -6,9 +6,11 @@
 
 <h2>Todos</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div>
+    @Html.ActionLink("Create New", "Create", null, new object { }, 
+    new { @class = "btn btn-primary" } )
+</div>
+
 <table class="table">
     <tr>
         <th>
@@ -35,9 +37,9 @@
             @Html.DisplayFor(modelItem => item.Done)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }, new { @class = "btn btn-default" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.ID }, new { @class = "btn btn-default" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID }, new { @class = "btn btn-default" })
         </td>
     </tr>
 }
